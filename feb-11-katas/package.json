@@ -1,0 +1,14 @@
+{
+  "name": "feb-11-katas",
+  "version": "1.0.0",
+  "main": "students.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
