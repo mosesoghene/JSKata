@@ -17,6 +17,7 @@ class MyQueue {
         return this.#size;
     }
 
+    
     enqueue(element){
         if (this.#size < this.#lenght) {
             this.#elements[this.#size++] = element;

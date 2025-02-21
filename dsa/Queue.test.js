@@ -43,6 +43,7 @@ test("only elements of specifiied lenght(5) can be enqueue()'ed", () => {
     expect(() => queue.enqueue(8)).toThrow("Queue is full!!!");
 });
 
+
 test("dequeue() reduces size by one", () => {
     expect(queue.size()).toBe(0);
 
