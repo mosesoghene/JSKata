@@ -1,4 +1,4 @@
-const {filterScore, increaseScoreBy, getSquares, sendBookToAll, findNoonClasses, totalOf} = require("./task");
+const {filterScore, increaseScoreBy, getSquares, sendBookToAll, findNoonClasses, totalOf, filterHealthyItems} = require("./task");
 
 beforeEach(() => studentScores = [10, 30, 50, 70, 90, 80, 100, 11]);
 
@@ -44,5 +44,22 @@ test("test fetch total of groceries", () => {
     let result = totalOf(data);
     let answer = 380;
     expect(result).toBe(answer);
+});
+
+test("filter healthy items from shopping list", () => {
+    let shoppingList = [
+        {name: "Apple", isHealthy: true},
+        {name: "Coke", isHealthy: false},
+        {name: "Omblee", ishealthy: false},
+        {name: "Orange", isHealthy: true}
+    ];
+
+    let result = filterHealthyItems(shoppingList);
+    let answer = [
+        {name: "Apple", isHealthy: true},
+        {name: "Orange", isHealthy: true}
+    ];
+
+    expect(result).toEqual(answer);
 });
 

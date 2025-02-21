@@ -17,7 +17,9 @@ let totalOf = (expenses) => {
         total += expenses[category];
     }
     return total;
-}
+};
+
+let filterHealthyItems = (shoppingList) => shoppingList.filter((item) => item.isHealthy);
 
 
-module.exports = {filterScore, increaseScoreBy, getSquares, sendBookToAll, findNoonClasses, totalOf};
+module.exports = {filterScore, increaseScoreBy, getSquares, sendBookToAll, findNoonClasses, totalOf, filterHealthyItems};
