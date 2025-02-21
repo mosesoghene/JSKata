@@ -14,14 +14,12 @@ test('test to get rectangle area', () => {
     expect(expected).toBe(actual);
 });
 
-
 test('test that shape is square', () => {
     const rectangle = new Rectangle('rectangle', 5, 5);
     const expected = rectangle.isSquare();
     const actual = true;
     expect(expected).toBe(actual);
 });
-
 
 test('test that shape is not square', () => {
     const rectangle = new Rectangle('rectangle', 8, 5);
