@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: #f8f9fa;
+    padding: 10px 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-button {
+    text-align: right;
+}
+
+
+.btn {    
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    min-height: 80vh;
+}
+
+.header-text {
+    flex: 1; 
+}
+
+.header-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.header-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px; 
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #007bff; 
+    color: #007bff;
+}
+
+.header-image {
+    flex: 1; 
+    text-align: right; 
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #f8f9fa;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .header-content {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .header-image {
+        order: -1; 
+        text-align: center; 
+    }
+
+    .header-buttons {
+        justify-content: center; 
+    }
+}
+
