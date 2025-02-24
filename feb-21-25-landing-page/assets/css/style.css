@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "cairo", san-serif;
+    color: #242424;
 }
 
 .header {
@@ -18,8 +20,11 @@
 }
 
 .nav-logo {
-    font-size: 28px;
-    font-weight: bold;
+    width: 100px;
+}
+
+.nav-logo img {
+    width: 100%;
 }
 
 .nav-links {
@@ -43,13 +48,13 @@
 }
 
 
-.btn {    
-    padding: 10px 20px; 
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -79,25 +84,28 @@
 }
 
 .header-text {
-    flex: 1; 
+    flex: 1;
 }
 
 .header-text h1 {
-    font-size: 36px;
+    font-size: 60px;
+    line-height: 1.2;
     margin-bottom: 20px;
+    font-weight: bolder;
 }
 
 .header-text p {
-    font-size: 18px;
+    font-size: 13.19px;
     margin-bottom: 20px;
 }
 
 .header-buttons {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -108,17 +116,41 @@
 .btn-primary {
     background-color: #007bff;
     color: white;
+    margin-right: 10px;
+}
+
+.btn-primary::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #000000;
+    width: 7em;
+    height: 1.8em;
+    top: 350px;
+    left: 95px;
+    z-index: -1;
+}
+
+.btn-icon {
+    width: 15px;
+}
+
+.text-highlight {
+    color: #2995E2;
+}
+
+.btn-no-border {
+    border-width: 0;
 }
 
 .btn-secondary {
     background-color: transparent;
-    border: 2px solid #007bff; 
-    color: #007bff;
+    color: #3f3f3f;
 }
 
 .header-image {
-    flex: 1; 
-    text-align: right; 
+    flex: 1;
+    text-align: right;
 }
 
 .header-image img {
@@ -158,17 +190,58 @@
     }
 
     .header-content {
-        flex-direction: column; 
-        text-align: center; 
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 20px;
     }
 
     .header-image {
-        order: -1; 
-        text-align: center; 
+        order: -1;
+        text-align: center;
     }
 
     .header-buttons {
-        justify-content: center; 
+        justify-content: center;
+    }
+
+    .btn-primary::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 1px solid #000000;
+        width: 7em;
+        height: 1.8em;
+        top: 648px;
+        left: 65px;
+        z-index: -1;
     }
 }
+
+
+
+
+/* Auto layout 
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 18px;
+
+width: 179px;
+height: 36px;
+
+
+/* Inside auto layout 
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+*/
 
